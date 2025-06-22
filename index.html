@@ -8,113 +8,101 @@
     <style>
         body {
             font-family: 'Kanit', sans-serif;
-            background: linear-gradient(135deg, #f0e6fa, #e6f7ff); /* Gradient Background */
+            background-color: #f7f7f7;
             margin: 0;
             padding: 20px;
             color: #333;
             line-height: 1.6;
         }
         .container {
-            max-width: 1000px; /* เพิ่มความกว้างเล็กน้อย */
+            max-width: 960px;
             margin: 20px auto;
             background-color: #ffffff;
-            padding: 35px 45px; /* เพิ่ม padding */
-            border-radius: 20px; /* ทำให้โค้งมนขึ้น */
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* เพิ่มความเข้มของเงา */
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
         header {
             text-align: center;
-            margin-bottom: 50px; /* เพิ่มระยะห่าง */
-            border-bottom: 3px solid #f0e0ff; /* เปลี่ยนสีขอบและเพิ่มความหนา */
-            padding-bottom: 25px;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
         }
         header h1 {
-            font-size: 3.5em; /* ทำให้ใหญ่ขึ้น */
-            color: #ff69b4; /* Pink */
-            margin-bottom: 15px;
-            text-shadow: 3px 3px 6px rgba(255, 105, 180, 0.3); /* เงาสีชมพู */
-            letter-spacing: 1px; /* เพิ่มระยะห่างตัวอักษร */
+            font-size: 3.2em;
+            color: #6a0dad; /* Deep Purple */
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
         header h2 {
-            font-size: 1.6em; /* ทำให้ใหญ่ขึ้นเล็กน้อย */
-            color: #6a0dad; /* Deep Purple */
-            font-weight: 400;
-            line-height: 1.8; /* เพิ่มระยะห่างบรรทัด */
+            font-size: 1.5em;
+            color: #555;
+            font-weight: 300;
         }
         .menu-section {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ปรับขนาด minmax */
-            gap: 35px; /* เพิ่มระยะห่างระหว่างเมนู */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
         }
         .menu-item {
-            background-color: #ffffff;
-            border: 1px solid #e0e0e0; /* สีขอบเหมือนเดิม */
-            border-radius: 15px; /* ทำให้โค้งมนขึ้น */
-            padding: 30px; /* เพิ่ม padding */
+            background-color: #fefefe;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px;
             text-align: center;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* เพิ่มความเข้มเงา */
-            transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .menu-item:hover {
-            transform: translateY(-8px) scale(1.02); /* ขยับขึ้นและขยายเล็กน้อย */
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* เงาเข้มขึ้น */
-            background-color: #fffafc; /* สีพื้นหลังอ่อนลงเมื่อ hover */
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
         .menu-item img {
-            width: 200px; /* ทำให้รูปใหญ่ขึ้น */
-            height: 200px;
+            width: 180px; /* Adjust image size as needed */
+            height: 180px; /* Keep aspect ratio */
             object-fit: cover;
-            border-radius: 50%; /* ทำให้เป็นวงกลม */
-            margin-bottom: 20px;
-            border: 5px solid #ffccdd; /* ขอบรูปสีชมพูอ่อน */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* เงารูปภาพ */
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 3px solid #6a0dad;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .menu-item h3 {
-            font-size: 2em; /* ทำให้ชื่อเมนูใหญ่ขึ้น */
+            font-size: 1.8em;
             color: #8a2be2; /* Blue Violet */
             margin-top: 0;
-            margin-bottom: 12px;
-            font-weight: 700; /* ทำให้หนาขึ้น */
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+            margin-bottom: 10px;
         }
         .menu-item .highlight-ingredients {
-            font-size: 1.05em;
-            color: #555;
-            margin-bottom: 12px;
-            font-weight: 500; /* ทำให้หนาขึ้นเล็กน้อย */
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 10px;
+            font-weight: 400;
         }
         .menu-item .description {
-            font-size: 0.98em; /* ปรับขนาดเล็กน้อย */
-            color: #666;
-            margin-bottom: 18px;
-            min-height: 80px; /* เพิ่มความสูงขั้นต่ำเพื่อให้เนื้อหาเท่ากันมากขึ้น */
-            display: flex; /* ใช้ flexbox เพื่อจัดเนื้อหา */
-            align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
-            justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
-            padding: 0 5px; /* เพิ่ม padding เล็กน้อย */
+            font-size: 0.95em;
+            color: #777;
+            margin-bottom: 15px;
+            min-height: 50px; /* Ensures consistent height */
         }
         .menu-item .price {
-            font-size: 1.6em; /* ทำให้ราคาใหญ่ขึ้น */
-            font-weight: 800; /* ทำให้หนาเป็นพิเศษ */
+            font-size: 1.4em;
+            font-weight: 700;
             color: #d63384; /* Pink */
-            margin-top: 20px;
-            letter-spacing: 0.5px;
+            margin-top: 15px;
         }
         .note {
             text-align: center;
-            margin-top: 50px;
-            font-size: 1em;
-            color: #777;
-            padding-top: 20px;
-            border-top: 1px dashed #e0e0e0;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #999;
         }
         .logo {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 20px;
         }
         .logo img {
-            width: 180px; /* ปรับขนาดโลโก้ */
-            opacity: 0.9;
+            width: 150px; /* Adjust logo size */
+            opacity: 0.8;
         }
         /* Icon styling (for example, using emojis or simple text) */
         .menu-item h3 span {
@@ -272,7 +260,14 @@
                 <p class="price">ราคา 99 บาท</p>
             </div>
 
-
+            <div class="menu-item">
+                <img src="Menu/images/Ocean Breeze Smoothie.png" alt="Ocean Breeze Smoothie">
+                <h3>🌌 Ocean Breeze Smoothie</h3>
+                <p class="highlight-ingredients">**ส่วนผสมเด่น:** อะโวคาโด้, กล้วยหอม, เนยถั่ว, สาหร่ายบลูสไปรูลิน่า</p>
+                <p class="description">❌ไม่เติมไซรัปน้ำตาลกลิ่นผลไม้
+<br>✅ผลไม้จริง100%</p>
+                <p class="price">ราคา 99 บาท</p>
+            </div>
         </div>
 
             </div>
